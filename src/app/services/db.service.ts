@@ -24,4 +24,5 @@ export class DbService {
     });
     return tempMovies;
   }
+
 }

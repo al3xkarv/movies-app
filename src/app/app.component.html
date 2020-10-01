@@ -1,5 +1,13 @@
 <h1>{{title}}
 </h1>
-<app-movies></app-movies>
-<app-movies [featured]="true"></app-movies>
+<nav>
+  <a routerLink="/movies" routerLinkActive="active">Movies</a>
+</nav>
+<nav>
+  <a routerLink="/featuredmovies" routerLinkActive="active">Movies Featured</a>
+  </nav>
+<nav>
+  <a routerLink="/moviesb" routerLinkActive="active">MoviesB</a>
+</nav>
+<router-outlet></router-outlet>
 

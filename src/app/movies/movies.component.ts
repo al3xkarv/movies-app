@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Movie} from "../movie";
-// import {MOVIES} from "../mock-movies";
 import {DbService} from "../services/db.service";
+import { ActivatedRoute} from "@angular/router";
+
 
 
 @Component({
@@ -10,18 +11,16 @@ import {DbService} from "../services/db.service";
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
   movies: Movie[];
-  movie: Movie ={
-    title: "Inception",
-    featured: true
-  }
 
-  constructor(private dbService: DbService) { }
+
+  constructor(private dbService: DbService,
+    private route: ActivatedRoute) { }
   @Input() featured: boolean;
 
-  getMovies(featured: boolean): void {
-    if (this.featured){
+  getMovies(featured: string): void {
+
+    if (featured == "true"){
     this.movies = this.dbService.getFeaturedMovies();
     }
     else {
@@ -30,7 +29,10 @@ export class MoviesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getMovies(this.featured);
+
+    const featured = this.route.snapshot.params.featured;
+    this.getMovies(featured);
+
   }
 
 }
