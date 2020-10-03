@@ -12,10 +12,6 @@ import {DbService} from "../services/db.service";
 export class MoviesComponent implements OnInit {
 
   movies: Movie[];
-  movie: Movie ={
-    title: "Inception",
-    featured: true
-  }
 
   constructor(private dbService: DbService) { }
   @Input() featured: boolean;
