@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MoviesBComponent } from './movies/movies-b/movies-b.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { YourGuard } from './guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -15,10 +17,13 @@ import { YourGuard } from './guard';
     MoviesComponent,
     MoviesBComponent,
     PageNotFoundComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [YourGuard],
   bootstrap: [AppComponent]
