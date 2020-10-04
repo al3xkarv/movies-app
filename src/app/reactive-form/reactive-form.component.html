@@ -1,45 +1,71 @@
-<form  [formGroup]="profileForm"(ngSubmit)="onSubmit()">
-
-  <label>Username:
-    <input type="text" formControlName="username"  required minlength="4" class="form-control">
-    <div *ngIf=" username.invalid && (username.dirty || username.touched)">
-    <div *ngIf=" username.errors.required" class="alert alert-danger">
-      Username is required.
-    </div>
-    <div *ngIf=" username.errors.minlength" class="alert alert-danger">
-      Username must have at least 4 characters.
-    </div>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label
+    >Username:
+    <input
+      type="text"
+      formControlName="username"
+      required
+      minlength="4"
+      class="form-control"
+    />
+    <div *ngIf="username.invalid && (username.dirty || username.touched)">
+      <div *ngIf="username.errors.required" class="alert alert-danger">
+        Username is required.
+      </div>
+      <div *ngIf="username.errors.minlength" class="alert alert-danger">
+        Username must have at least 4 characters.
+      </div>
     </div>
   </label>
 
-  <label> Password:
-    <input type="password" formControlName="password" required upperAndLowerCase class="form-control">
-    <div *ngIf=" password.invalid && (password.dirty || password.touched)">
-      <div *ngIf=" password.errors.required" class="alert alert-danger">
-      Password is required.
+  <label>
+    Password:
+    <input
+      type="password"
+      formControlName="password"
+      required
+      upperAndLowerCase
+      class="form-control"
+    />
+    <div *ngIf="password.invalid && (password.dirty || password.touched)">
+      <div *ngIf="password.errors.required" class="alert alert-danger">
+        Password is required.
       </div>
-      <div *ngIf=" password.invalid && !password.errors.required" class="alert alert-danger">
-      Password must have both uppercase and lowercase.
+      <div
+        *ngIf="password.invalid && !password.errors.required"
+        class="alert alert-danger"
+      >
+        Password must have both uppercase and lowercase.
       </div>
-      </div>
+    </div>
   </label>
 
-  <label> Email:
-    <input type="email" formControlName="email" required email class="form-control">
-    <div *ngIf=" email.invalid && (email.dirty || email.touched)">
-      <div *ngIf=" email.errors.required" class="alert alert-danger">
-      Email is required.
-    </div>
+  <label>
+    Email:
+    <input
+      type="email"
+      formControlName="email"
+      required
+      email
+      class="form-control"
+    />
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required" class="alert alert-danger">
+        Email is required.
+      </div>
 
-      <div *ngIf=" email.errors.email" class="alert alert-danger">
-      Email must have valid email syntax.
+      <div *ngIf="email.errors.email" class="alert alert-danger">
+        Email must have valid email syntax.
+      </div>
     </div>
-  </div>
   </label>
 
-  <label> Role:
-    <input type="text" formControlName="role" class="form-control">
+  <label>
+    Role:
+    <input type="text" formControlName="role" class="form-control" />
   </label>
 </form>
 
-<button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
+<button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">
+  Submit
+</button>

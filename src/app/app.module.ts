@@ -10,7 +10,6 @@ import { YourGuard } from './guard';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +18,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     PageNotFoundComponent,
     ReactiveFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [YourGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
