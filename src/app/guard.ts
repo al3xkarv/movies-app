@@ -2,7 +2,6 @@ import {
   CanActivate,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  ActivatedRoute,
 } from '@angular/router';
 
 export class YourGuard implements CanActivate {

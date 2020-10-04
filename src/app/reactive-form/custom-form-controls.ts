@@ -1,4 +1,4 @@
-import { FormControl, ValidatorFn } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 export function upperAndLowerCase(control: FormControl) {
   const password = control.value;
