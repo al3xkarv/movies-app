@@ -1,16 +1,9 @@
 import { NgModule } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  RouterModule,
-  RouterStateSnapshot,
-  Routes,
-  UrlTree,
-} from '@angular/router';
-import { MoviesComponent } from './movies/movies.component';
-import { MoviesBComponent } from './movies/movies-b/movies-b.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule, Routes } from '@angular/router';
 import { YourGuard } from './guard';
+import { MoviesBComponent } from './movies/movies-b/movies-b.component';
+import { MoviesComponent } from './movies/movies.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: 'movies', component: MoviesComponent, pathMatch: 'prefix' },
