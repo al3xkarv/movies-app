@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../movie';
-// import {MOVIES} from "../mock-movies";
 import { DbService } from '../services/db.service';
 
 @Component({
