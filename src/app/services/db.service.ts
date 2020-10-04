@@ -1,24 +1,22 @@
 import { Injectable } from '@angular/core';
-import {Movie} from "../movie";
-import {MOVIES} from "../mock-movies";
-
+import { Movie } from '../movie';
+import { MOVIES } from '../mock-movies';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DbService {
-
-  constructor() { }
+  constructor() {}
 
   getMovies(): Movie[] {
     return MOVIES;
   }
 
-  getFeaturedMovies(): Movie[]{
+  getFeaturedMovies(): Movie[] {
     let tempMovies = [];
 
-    MOVIES.forEach(movie => {
-      if (movie.featured){
+    MOVIES.forEach((movie) => {
+      if (movie.featured) {
         tempMovies.push(movie);
       }
     });
