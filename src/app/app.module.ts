@@ -8,7 +8,6 @@ import { MoviesBComponent } from './movies/movies-b/movies-b.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { YourGuard } from './guard';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +15,8 @@ import { YourGuard } from './guard';
     MoviesBComponent,
     PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [YourGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
