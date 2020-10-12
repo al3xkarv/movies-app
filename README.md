@@ -1,5 +1,7 @@
 # Exercises
 
+Exercise 1 is located at observables/publish-events.
+
 1. Create an observable that publishes Events
 * Create a component with an input field
 * Add the AfterViewInit lifecycle hook
