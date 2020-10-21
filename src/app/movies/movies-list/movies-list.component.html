@@ -1,0 +1,20 @@
+<input type="text" [(ngModel)]="searchTerm" />
+<button (click)="searchMovies(searchTerm)">search</button>
+
+<div *ngFor="let movie of movies$ | async" (click)="deleteMovie(movie.title)">
+  <span [style]="movie.deleted ? { 'text-decoration': 'line-through' } : null">
+    {{ movie.title }}
+  </span>
+</div>
+<input type="text" [(ngModel)]="addTitle" />
+<button (click)="addMovie(addTitle); addTitle = ''">add movie</button>
+<div>
+  <input type="text" [(ngModel)]="title" />
+  <input type="text" [(ngModel)]="updateValue" />
+
+  <button
+    (click)="updateMovie(title, updateValue); title = ''; updateValue = ''"
+  >
+    update movie
+  </button>
+</div>
